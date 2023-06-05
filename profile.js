@@ -20,12 +20,12 @@ function changeProfileImage() {
 }
 
 // 프로필 닉네임 변경하기
- function changeProfileName() {
-  const nameInput = document.getElementById("nameInput");
+function changeProfileName() {
+  const nameInput = document.getElementById("login-nameInput"); 
   const profileName = document.getElementById("profileName");
-  const saveProfileButton = document.getElementById("saveProfile");
+  const saveProfileButton = document.getElementById("login-saveProfile"); 
 
-  if (nameInput.value) {
+  if (nameInput && nameInput.value) {
     profileName.textContent = nameInput.value;
     saveProfileButton.disabled = false;
   } else {
@@ -34,28 +34,34 @@ function changeProfileImage() {
   }
 }
 
+
 // 프로필 폼 닫기
 function toggleModal(id) {
-  document.getElementById(id).classList.toggle("on");
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.toggle("on");
+  }
 }
+
 
 // 프로필 저장 처리
 function saveProfile() {
-  const nameInput = document.getElementById("nameInput").value;
-  const passwordInput = document.getElementById("passwordInput").value;
+  const nameInput = document.getElementById("login-nameInput"); 
+  const passwordInput = document.getElementById("login-passwordInput"); 
 
-  console.log("프로필 저장:", nameInput, passwordInput);
+  console.log("프로필 저장:", nameInput.value, passwordInput.value); 
 
   // 프로필 폼 닫기
   toggleModal();
 }
 
+
 // 비밀번호 확인 검사
- function checkPassword() {
-  const passwordInput = document.getElementById("passwordInput");
+function checkPassword() {
+  const passwordInput = document.getElementById("signup-passwordInput"); 
   const confirmPasswordInput = document.getElementById("confirmPasswordInput");
   const passwordWarning = document.getElementById("passwordWarning");
-  const saveProfileButton = document.getElementById("saveProfile");
+  const saveProfileButton = document.getElementById("signup-saveProfile"); 
 
   if (passwordInput.value !== confirmPasswordInput.value) {
     passwordWarning.textContent = "비밀번호가 일치하지 않습니다.";
