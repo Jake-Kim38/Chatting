@@ -44,15 +44,19 @@ function toggleModal(id) {
 }
 
 
-// 프로필 저장 처리
+// 로그인, 회원가입 입력 처리
 function saveProfile() {
   const nameInput = document.getElementById("login-nameInput"); 
   const passwordInput = document.getElementById("login-passwordInput"); 
 
   console.log("프로필 저장:", nameInput.value, passwordInput.value); 
 
-  // 프로필 폼 닫기
-  toggleModal();
+}
+
+// 프로필 변경 처리
+function saveChangedProfile() {
+  const nameInput = document.getElementById("changeProfileNameInput").value;
+  console.log("프로필 변경:", nameInput);
 }
 
 

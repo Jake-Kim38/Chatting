@@ -426,51 +426,6 @@ body {
   animation: rotate 1s linear infinite;
 }
 
-/* 추가된 스타일 */
-.modalConcept.modalProfile .modal-dialog {
-  animation: bounceInDown 0.5s;
-}
-
-.modalConcept .modal-dialog.modalClosing {
-  animation: bounceOutUp 0.5s;
-}
-
-@keyframes bounceInDown {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  60% {
-    transform: translateY(20px);
-  }
-
-  80% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounceOutUp {
-  0% {
-    transform: translateY(0);
-  }
-
-  20% {
-    transform: translateY(-10px);
-  }
-
-  40% {
-    transform: translateY(20px);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
 .form-control {
   display: block;
   width: 100%;
